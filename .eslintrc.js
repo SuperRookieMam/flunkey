@@ -21,7 +21,8 @@ module.exports = {
   ],
   globals: {
     CONTEXT_PATH: true,
-    Media: true
+    Media: true,
+    cordova: true
   },
   // add your custom rules here
   rules: {

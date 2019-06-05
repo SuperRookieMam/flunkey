@@ -20,6 +20,16 @@
   export default class App extends Vue {
     created () {
       this.$router.push({name: 'login'})
+      let wwwPath = cordova.file.applicationDirectory + 'www'
+      let mymedia = new Media(wwwPath + '/voice/daji.mp3', f, d)
+      mymedia.setVolume(1)
+      mymedia.play()
+      function f () {
+        console.log('操作成功')
+      }
+      function d (err) {
+        console.log(err)
+      }
     }
 
     mounted () {
