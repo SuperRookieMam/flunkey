@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
@@ -8,32 +7,12 @@
 <script>
   import Vue from 'vue'
   import {Component} from 'vue-property-decorator'
-  import helloWord from './components/HelloWorld'
-
-  @Component({
-    components: {
-      helloWord
-      // 注册主键
-      //   topThemeTemplate: () => import('./components/HelloWorld')
-    }
-  })
+  @Component
   export default class App extends Vue {
     created () {
-      this.$router.push({name: 'login'})
-      let wwwPath = cordova.file.applicationDirectory + 'www'
-      let mymedia = new Media(wwwPath + '/voice/daji.mp3', f, d)
-      mymedia.setVolume(1)
-      mymedia.play()
-      function f () {
-        console.log('操作成功')
-      }
-      function d (err) {
-        console.log(err)
-      }
+      this.$router.push({name: 'wellcome'})
     }
-
     mounted () {
-      console.log('The App component mounted')
     }
   }
 </script>

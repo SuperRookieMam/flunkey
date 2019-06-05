@@ -6,8 +6,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: () => import('../../components/HelloWorld')
+      name: 'wellcome',
+      component: () => import('../../module/wellcome/wellcome'),
+      children: []
     }
   ]
 })
